@@ -1,0 +1,146 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="536,1918.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="496,1798.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="rating" />
+      <Variable x:TypeArguments="x:String" Name="facilities" />
+      <Variable x:TypeArguments="x:String" Name="clean" />
+      <Variable x:TypeArguments="x:String" Name="room" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="Open Browser" Hidden="False" sap:VirtualizedContainerService.HintSize="473.6,1673.6" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="https://www.makemytrip.com/hotels/hotel-details/?checkin=07242019&amp;checkout=07312019&amp;city=XGP&amp;country=IN&amp;searchText=Mango%20Valley%20Resort%20Ganpatipule&amp;roomStayQualifier=2e0e&amp;hotelId=201811281301162654">
+      <ui:OpenBrowser.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="459.2,1573.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="436.8,1448.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="Attach Browser 'MangoVall Page'" sap:VirtualizedContainerService.HintSize="414.4,379.2" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="5a0ded9a057fa3c331fa682934f5b27c" Selector="&lt;html app='firefox.exe' title='Mango Valley Resort Ganpatipule | Hotel Details Page | MakeMyTri*' /&gt;">
+                <ui:BrowserScope.Body>
+                  <ActivityAction x:TypeArguments="x:Object">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="336.8,232" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:ExtractData NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DelayBetweenPagesMS="300" DisplayName="Extract Structured Data 'SECTION  UserReviews'" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' class='_RatingReview' idx='1'/&gt;&lt;webctrl tag='div' class='reviewBox'/&gt;&lt;webctrl tag='div' class='reviewRow' idx='1'/&gt;&lt;/row&gt;&lt;column exact='1' name='Name and Date' attr='text'&gt;&lt;webctrl tag='div' class='_RatingReview' idx='1'/&gt;&lt;webctrl tag='div' class='reviewBox'/&gt;&lt;webctrl tag='div' class='reviewRow' idx='1'/&gt;&lt;webctrl tag='div' class='reviewBoxLeft' idx='1'/&gt;&lt;webctrl tag='p' class='grayText appendBottom10' idx='1'/&gt;&lt;/column&gt;&lt;column exact='1' name='Review' attr='text'&gt;&lt;webctrl tag='div' class='_RatingReview' idx='1'/&gt;&lt;webctrl tag='div' class='reviewBox'/&gt;&lt;webctrl tag='div' class='reviewRow' idx='1'/&gt;&lt;webctrl tag='div' class='reviewBoxLeft' idx='1'/&gt;&lt;webctrl tag='p' class='latoBold font18 lineHight22 greenText' idx='1'/&gt;&lt;/column&gt;&lt;column exact='1' name='Comment' attr='text'&gt;&lt;webctrl tag='div' class='_RatingReview' idx='1'/&gt;&lt;webctrl tag='div' class='reviewBox'/&gt;&lt;webctrl tag='div' class='reviewRow' idx='1'/&gt;&lt;webctrl tag='div' class='reviewBoxLeft' idx='1'/&gt;&lt;webctrl tag='p' class='font14 lineHight22' idx='1'/&gt;&lt;/column&gt;&lt;column exact='1' name='Rating' attr='text'&gt;&lt;webctrl tag='div' class='_RatingReview' idx='1'/&gt;&lt;webctrl tag='div' class='reviewBox'/&gt;&lt;webctrl tag='div' class='reviewRow' idx='1'/&gt;&lt;webctrl tag='span'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="314.4,107.2" sap2010:WorkflowViewState.IdRef="ExtractData_1" MaxNumberOfResults="100">
+                        <ui:ExtractData.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e205c986a4388e9f310b63c628d7c346" Selector="&lt;webctrl id='UserReviews' tag='SECTION' /&gt;" WaitForReady="COMPLETE" />
+                        </ui:ExtractData.Target>
+                      </ui:ExtractData>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:BrowserScope.Body>
+              </ui:BrowserScope>
+              <ui:WriteCsvFile Encoding="{x:Null}" AddHeaders="True" DataTable="[ExtractDataTable]" Delimitator="Comma" DisplayName="Write CSV" FilePath="Reviews.csv" sap:VirtualizedContainerService.HintSize="414.4,88" sap2010:WorkflowViewState.IdRef="WriteCsvFile_1" />
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="414.4,107.2" sap2010:WorkflowViewState.IdRef="GetValue_1">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="fd0976e16a0fe2b804492a5361288555" Selector="&lt;html app='firefox.exe' title='Mango Valley Resort Ganpatipule | Hotel Details Page | MakeMyTri*' /&gt;&lt;webctrl aaname='3.9' parentid='UserReviews' tag='SPAN' /&gt;" WaitForReady="INTERACTIVE" />
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="x:String">[rating]</OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="414.4,107.2" sap2010:WorkflowViewState.IdRef="GetValue_2">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="dac4d309e9f4a5621ba4ff8cc0421fa9" Selector="&lt;html app='firefox.exe' title='Mango Valley Resort Ganpatipule | Hotel Details Page | MakeMyTri*' /&gt;&lt;webctrl aaname='3.0' parentid='concept_0' tag='SPAN' /&gt;" WaitForReady="INTERACTIVE" />
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="x:String">[clean]</OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="414.4,107.2" sap2010:WorkflowViewState.IdRef="GetValue_3">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="04a360145f903ccec8791a4f27a63f7b" Selector="&lt;html app='firefox.exe' title='Mango Valley Resort Ganpatipule | Hotel Details Page | MakeMyTri*' /&gt;&lt;webctrl aaname='4.0' parentid='concept_1' tag='SPAN' /&gt;" WaitForReady="INTERACTIVE" />
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="x:String">[facilities]</OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="414.4,107.2" sap2010:WorkflowViewState.IdRef="GetValue_4">
+                <ui:GetValue.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="02c5f55be6d19ed3c49269ddcea09b95" Selector="&lt;html app='firefox.exe' title='Mango Valley Resort Ganpatipule | Hotel Details Page | MakeMyTri*' /&gt;&lt;webctrl aaname='4.8' parentid='concept_2' tag='SPAN' /&gt;" WaitForReady="INTERACTIVE" />
+                </ui:GetValue.Target>
+                <ui:GetValue.Value>
+                  <OutArgument x:TypeArguments="x:String">[room]</OutArgument>
+                </ui:GetValue.Value>
+              </ui:GetValue>
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="414.4,60" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Overall Rating: &quot;+rating+ &quot; Child Friendniness: &quot;+clean+&quot; Facilities: &quot;+facilities+&quot; Room: &quot;+room]" TopMost="True" />
+              <ui:WriteTextFile DisplayName="Write Text File" FileName="summary.txt" sap:VirtualizedContainerService.HintSize="414.4,88" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[&quot;Overall Rating: &quot;+rating+ &quot; Child Friendniness: &quot;+clean+&quot; Facilities: &quot;+facilities+&quot; Room: &quot;+room]" />
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </ui:OpenBrowser.Body>
+    </ui:OpenBrowser>
+  </Sequence>
+</Activity>
